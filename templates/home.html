@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="static/styles.css" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/528/528098.png">
+    <title>Pokedex</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <div class="div-all">
+        <div class="centralizar">
+            <h1>Catch your Pokemon</h1>
+            <p>Everything about your favorite pokemon!</p>
+
+            <form action="/pokemon" method="post">
+                <div class="txt-field">
+                    <input type="text" name="pokemon" id="pokemon" required>
+                    <label for="pokemon">Gotta Catch 'Em All</label>
+                </div>
+                    <input type="submit" class="submit"/>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
